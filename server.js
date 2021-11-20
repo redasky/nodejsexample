@@ -13,5 +13,6 @@ app.get('/', function(req, res) {
 
 
 app.listen(8080, ip);
+console.log('Server listening on 8080 ...');
 
 module.exports = app;
