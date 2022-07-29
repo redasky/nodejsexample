@@ -8,6 +8,7 @@ var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 
 app.get('/', function(req, res) {
+    console.log("Got request on / endpoint. Sending back a Hello World ....");
     res.send('Hello from NodeJS  at '+ new Date());
 });
 
