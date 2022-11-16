@@ -22,6 +22,10 @@ app.get('/api/end_point2', function(req, res) {
     res.json([{ user: 'Ayoub' }, { user: 'Mouad' }]);
 });
 
+app.get('*', function(req, res){
+  res.status(404).send('what???');
+});
+
 
 app.listen(8080, ip);
 console.log('Server listening on 8080 ...');
