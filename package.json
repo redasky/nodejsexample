@@ -2,14 +2,19 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+	"start": "node server.js",
+    "swagger-autogen": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "and": "^0.0.3",
+    "express": "^4.17.1",
+    "swagger-autogen": "^2.22.0",
+    "swagger-ui-express": "^4.6.0"
   }
 }
