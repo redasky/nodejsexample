@@ -22,6 +22,11 @@ app.get('/api/end_point2', function(req, res) {
     res.json([{ user: 'Ayoub' }, { user: 'Mouad' }]);
 });
 
+app.get('/api/end_point3/:id', function(req, res) {
+    console.log("Got request on /end_point3 endpoint. Sending some json content ....");
+    res.json(req.params);
+});
+
 app.get('*', function(req, res){
   res.status(404).send('what???');
 });
