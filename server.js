@@ -14,6 +14,7 @@ app.get('/', function(req, res) {
 
 app.get('/api/end_point1', function(req, res) {
     console.log("Got request on /end_point1 endpoint. Sending some json content ....");
+    console.log(req);
     res.json({ company: 'Munisys' });
 });
 
