@@ -9,23 +9,28 @@ var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 app.get('/', function(req, res) {
     console.log("Got request on / endpoint. Sending back a Hello World ....");
-    res.send('<h3>Hello from NodeJS-v3  at </h3>'+ new Date());
+    res.send('<h3>Hello and Welcome to Morocco football team Staff at </h3>'+ new Date());
 });
 
-app.get('/api/end_point1', function(req, res) {
-    console.log("Got request on /end_point1 endpoint. Sending some json content ....");
+app.get('/api/keepers', function(req, res) {
+    console.log("Got request on /keepers endpoint. Sending goals keepers in json content ....");
     console.log(req);
-    res.json({ company: 'Munisys' });
+    res.json([{ GoalKeeper1: 'BOUNOU' }, { GoalKeeper2: 'KAJOUI' }, { GoalKeeper3: 'TAGNAOUTI' }]);
 });
 
-app.get('/api/end_point2', function(req, res) {
-    console.log("Got request on /end_point2 endpoint. Sending some json content ....");
-    res.json([{ user: 'Ayoub' }, { user: 'Mouad' }]);
+app.get('/api/defenders', function(req, res) {
+    console.log("Got request on /defenders endpoint. Sending some json content ....");
+    res.json([{ user: 'AGERD' }, { user: 'SAISS' }, { user: 'HAKIMI' }, { user: 'ATIAT ALLAH' }]);
 });
 
-app.get('/api/end_point3/:id', function(req, res) {
-    console.log("Got request on /end_point3 endpoint. Sending some json content ....");
-    res.json(req.params);
+app.get('/api/middle', function(req, res) {
+    console.log("Got request on /middle endpoint. Sending some json content ....");
+    res.json([{ user: 'AMELAH' }, { user: 'AMRABAT' }, { user: 'OUNAHI' }]);
+});
+
+app.get('/api/attack', function(req, res) {
+    console.log("Got request on /middle endpoint. Sending some json content ....");
+    res.json([{ user: 'ZIYECH' }, { user: 'BOUFAL' }, { user: 'ENSSIRY' }]);
 });
 
 app.get('*', function(req, res){
